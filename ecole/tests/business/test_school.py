@@ -1,12 +1,14 @@
+# Ajout du répertoire parent au sys.path pour pouvoir importer les modules
 import sys
 import os
-import unittest
-from unittest.mock import MagicMock, Mock, # patch
-from io import StringIO
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
+
+# Imports standard et tiers
 import re
-# Ajout du répertoire parent au sys.path pour pouvoir importer les modules
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__),
-                                                '../../')))
+import unittest
+from io import StringIO
+from unittest.mock import MagicMock, Mock
+
 # Importation des classes de l'application
 from business.school import School
 from models.course import Course
