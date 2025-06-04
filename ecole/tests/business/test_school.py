@@ -1,7 +1,7 @@
 import sys
 import os
 import unittest
-from unittest.mock import MagicMock, Mock, patch
+from unittest.mock import MagicMock, Mock, # patch
 from io import StringIO
 import re
 # Ajout du répertoire parent au sys.path pour pouvoir importer les modules
@@ -13,8 +13,8 @@ from models.course import Course
 from models.teacher import Teacher
 from models.student import Student
 
-class TestSchool(unittest.TestCase):
 
+class TestSchool(unittest.TestCase):
 
     def test_add_course(self):
         # Création de l'objet School
@@ -31,7 +31,6 @@ class TestSchool(unittest.TestCase):
 
         # Vérifie que le dernier cours ajouté est bien le mock course
         self.assertEqual(school.courses[-1], expected_value)
-
 
     def test_add_teacher(self):
         school = School()
@@ -75,7 +74,8 @@ class TestSchool(unittest.TestCase):
         student_1 = MagicMock(spec=Student)
         student_2 = MagicMock(spec=Student)
 
-        # Configuration des mocks pour la méthode 'students_taking_it' de chaque cours
+        # Configuration des mocks pour la méthode
+        # 'students_taking_it' de chaque cours
         course_1.students_taking_it = [student_1, student_2]
         course_2.students_taking_it = [student_1]
 
@@ -86,7 +86,8 @@ class TestSchool(unittest.TestCase):
         # Ajout des cours à l'école
         school.courses = [course_1, course_2]
 
-        # Redirection de la sortie print dans un objet StringIO pour capter ce qui est imprimé
+        # Redirection de la sortie print dans un objet StringIO
+        # pour capter ce qui est imprimé
         captured_output = StringIO()
         sys.stdout = captured_output
 
