@@ -4,10 +4,9 @@ import unittest
 from unittest.mock import MagicMock, Mock, patch
 from io import StringIO
 import re
-
 # Ajout du répertoire parent au sys.path pour pouvoir importer les modules
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
-
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__),
+                                                '../../')))
 # Importation des classes de l'application
 from business.school import School
 from models.course import Course
@@ -15,6 +14,7 @@ from models.teacher import Teacher
 from models.student import Student
 
 class TestSchool(unittest.TestCase):
+
 
     def test_add_course(self):
         # Création de l'objet School
@@ -31,6 +31,7 @@ class TestSchool(unittest.TestCase):
 
         # Vérifie que le dernier cours ajouté est bien le mock course
         self.assertEqual(school.courses[-1], expected_value)
+
 
     def test_add_teacher(self):
         school = School()
@@ -62,14 +63,12 @@ class TestSchool(unittest.TestCase):
         # Vérifie que le dernier étudiant ajouté est bien le mock student
         self.assertEqual(school.students[-1], expected_value)
 
-
-
     # ... reste du code du test
 
     def test_display_courses_list(self):
+
         # Création de l'objet School
         school = School()
-
         # Création de MagicMocks pour les objets Course, Teacher et Student
         course_1 = MagicMock(spec=Course)
         course_2 = MagicMock(spec=Course)
