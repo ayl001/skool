@@ -31,21 +31,21 @@ def init_school(school: School) -> None:
 
     # création des cours
     francais: Course = Course("Français", date(2024, 1, 29),
-                        date(2024, 2, 16))
+                            date(2024, 2, 16))
     histoire: Course = Course("Histoire", date(2024, 2, 5),
-                        date(2024, 2, 16))
+                            date(2024, 2, 16))
     geographie: Course = Course("Géographie", date(2024, 2, 5),
-                        date(2024, 2, 16))
+                            date(2024, 2, 16))
     mathematiques: Course = Course("Mathématiques", date(2024, 2, 12),
-                        date(2024, 3, 8))
+                            date(2024, 3, 8))
     physique: Course = Course("Physique", date(2024, 2, 19),
-                        date(2024, 3, 8))
+                            date(2024, 3, 8))
     chimie: Course = Course("Chimie", date(2024, 2, 26),
-                        date(2024, 3, 15))
+                            date(2024, 3, 15))
     anglais: Course = Course("Anglais", date(2024, 2, 12),
-                        date(2024, 2, 24))
+                            date(2024, 2, 24))
     sport: Course = Course("Sport", date(2024, 3, 4),
-                        date(2024, 3, 15))
+                            date(2024, 3, 15))
 
     # ajout de ceux-ci à l'école
     for course in [francais, histoire, geographie, mathematiques,
@@ -54,7 +54,7 @@ def init_school(school: School) -> None:
 
     # création des enseignants
     victor = Teacher('Victor', 'Hugo', 23, date(2023, 9, 4))
-    jules  = Teacher('Jules', 'Michelet', 32, date(2023, 9, 4))
+    jules = Teacher('Jules', 'Michelet', 32, date(2023, 9, 4))
     sophie = Teacher('Sophie', 'Germain', 25, date(2023, 9, 4))
     marie = Teacher('Marie', 'Curie', 31, date(2023, 9, 4))
     william = Teacher('William', 'Shakespeare', 34, date(2023, 9, 4))

@@ -1,21 +1,21 @@
 # -*- coding: utf-8 -*-
-
 """
 Classe Course
 """
 
-""" 
-pour simplifier les annotations de types des classes 
-# non importées à l'exécution (teacher: Teacher plutôt 
-# que teacher: 'Teacher')
-from __future__ import annotations
-"""
-from typing import Optional, TYPE_CHECKING
+# Imports de la bibliothèque standard
 from dataclasses import dataclass, field
 from datetime import date
+from typing import Optional, TYPE_CHECKING
 
-# pour éviter une circularité des imports à l'exécution,
-# les classes Student et Teacher important la classe Course
+# Import pour les annotations de types
+from __future__ import annotations
+
+# Commentaire sur les imports conditionnels
+"""
+Pour éviter une circularité des imports à l'exécution,
+les classes Student et Teacher important la classe Course.
+"""
 if TYPE_CHECKING:
     from .student import Student
     from .teacher import Teacher
