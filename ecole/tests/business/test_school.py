@@ -103,7 +103,8 @@ class TestSchool(unittest.TestCase):
         )
 
         # Remplace les IDs dynamiques par "..." pour permettre la comparaison
-        actual_output = re.sub(r"<MagicMock spec='Student' id='[^']*'>", "<MagicMock spec='Student' id='...'>",
+        actual_output = re.sub(r"<MagicMock spec='Student' id='[^']*'>",
+                               "<MagicMock spec='Student' id='...'>",
                                captured_output.getvalue())
 
         # Vérification de ce qui a été imprimé par la méthode

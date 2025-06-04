@@ -3,13 +3,13 @@
 Classe Course
 """
 
+# Import pour les annotations de types
+from __future__ import annotations
+
 # Imports de la bibliothèque standard
 from dataclasses import dataclass, field
 from datetime import date
 from typing import Optional, TYPE_CHECKING
-
-# Import pour les annotations de types
-from __future__ import annotations
 
 # Commentaire sur les imports conditionnels
 """
